@@ -1,0 +1,29 @@
+header {
+    border-bottom: 1px solid #000000;
+}
+
+header .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    font-size: 22px;
+}
+header .content .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10;
+}
+
+header .content .profile span{
+    color: #6b6b6b;
+}
+
+header .content .profile .profile-image{
+    height: 50px;
+    width: 50px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 50%;
+}
