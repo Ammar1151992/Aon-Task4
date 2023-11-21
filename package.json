@@ -2,12 +2,11 @@
   "name": "aon-shope",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "browserslist": ">0.5  , last 3 versions, not dead",
   "author": "",
   "license": "ISC",
   "devDependencies": {

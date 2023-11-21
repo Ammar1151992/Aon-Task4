@@ -11,9 +11,9 @@
 
 @media screen and (max-width:800){
    .button button{
-     position: fixed;
-     bottom: 20;
-     right: 16;
-     left: 16;
+     position: fixed !important;
+     bottom: 20 !important;
+     right: 16 !important;
+     left: 16 !important;
    }   
 }

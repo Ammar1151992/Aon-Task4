@@ -99,28 +99,28 @@
 
 @media screen and (max-width:800){
 
-    .body-table .table table th{
-        display:none;
+    .body-table .table table th {
+        display:none !important;
     }
 
     .body-table .table table tr:first-child{
-        display:none;
+        display:none !important;
     }
 
     .body-table .table table tr{
-        display:grid;
-        grid-template-columns: repeat(1, 1fr);
-        border: 1px solid #000;
-        margin-bottom: 10px;
+        display:grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+        border: 1px solid #000 !important;
+        margin-bottom: 10px !important;
     }
 
     .body-table .table table td{
-        border-bottom: 1px solid #D9D9D9;
+        border-bottom: 1px solid #D9D9D9 !important;
     }
     .body-table .table table td .onMobile{
-        display: inline;
-        font-size: 18px;
-        font-weight: bold;
+        display: inline !important;
+        font-size: 18px !important;
+        font-weight: bold !important;
     }
 
 }

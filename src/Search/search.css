@@ -40,15 +40,15 @@
 
 @media screen and (max-width:800){
     .search{
-        display: block;
+        display: block !important;
     }
 
     .search .content{
-        display: flex;
+        display: flex !important;
     }
 
     .search .content input{
-        width: 100%;
+        width: 100% !important;
     }
 
 }
