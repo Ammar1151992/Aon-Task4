@@ -13,7 +13,7 @@
     width: 200px;
     border-radius: 20px;
     padding-left: 38px;
-    padding-top: 4px;
+    font-size: 20px;
     background-color: #efefef;
 }
 
@@ -27,6 +27,8 @@
     background: none;
     padding-left: 8px;
     font-size: 28px;
+    color:#919191 ;
+    cursor: pointer;
 }
 
 .search .content input::placeholder{

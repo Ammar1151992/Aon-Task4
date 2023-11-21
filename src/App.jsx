@@ -8,13 +8,20 @@ import { Body } from "./Body/body";
 import { useStore } from "./userState";
 
 export const App = () => {
-  const { products, setProducts, showTxt } = useStore();
+  const { products, setProducts,search,loading, setLoading } = useStore();
+  const [skip, setSkip] = useState(0);
 
   const getProducts = async () => {
+    setLoading(true)
     try {
-      let resp = await fetch("https://dummyjson.com/products");
+      let resp = await fetch(`https://dummyjson.com/products/search?q=${search}&limit=30&skip=${skip}`);
       let data = await resp.json();
-      setProducts(data.products);
+      if(search === ""){
+        setProducts([...products, ...data.products]);
+      } else{
+        setProducts(data.products);
+      }
+      setLoading(false)
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -23,7 +30,11 @@ export const App = () => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [search, skip]);
+
+  const hundleSkip = () => {
+    setSkip(skip + 30);
+  }
   return (
     <div>
       <Header />
@@ -32,6 +43,17 @@ export const App = () => {
         <Search />
         <Space height={28} />
         <Body txtLength={20} />
+        {!loading && (
+        <button className="loadmore" onClick={() => {
+          hundleSkip()
+          setLoading(true)}}>
+          Show More
+        </button>
+        )}
+        <Space height={75} />
+        <div className={loading ? "lod" : ""}>
+                <div class="loader"></div>
+                </div>
       </Container>
     </div>
   );

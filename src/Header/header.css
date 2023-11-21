@@ -20,10 +20,11 @@ header .content .profile span{
     color: #6b6b6b;
 }
 
-header .content .profile .profile-image{
+header .content .profile .profile-image img{
     height: 50px;
     width: 50px;
     background-color: #e0e0e0;
     border: none;
     border-radius: 50%;
+    object-fit: cover;
 }

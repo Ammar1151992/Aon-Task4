@@ -1,17 +1,31 @@
 import "./search.css";
 import { CiSearch } from "react-icons/ci";
-import { Button } from "../Button/button";
+import { Add } from "../Add/add";
+import { useState } from "react";
+import { useStore } from "../userState";
 
 export const Search  = () => {
+    const [value, setValue] = useState();
+    const {setSearch} = useStore();
     return (
         <div className="search">
             <div className="content">
-                <button>
+                <button onClick={() => setSearch(value)}>
                     <CiSearch />
                 </button>
-                <input type="text" placeholder="Find Product"/>  
+                <input 
+                value={value} 
+                onChange={(e) => setValue(e.target.value)} 
+                type="text" 
+                placeholder="Find Product"
+                onKeyDown={(e) => {
+                    if(e.key === "Enter"){
+                        setSearch(value)
+                    }
+                }}
+                />  
             </div>
-            <Button />
+            <Add />
         </div>
     )
 }
